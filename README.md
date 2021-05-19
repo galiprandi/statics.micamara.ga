@@ -1,8 +1,8 @@
 # statics.micamara.ga
 
-Statics files used in site https://micamara.ga
+Statics files used in website [https://micamara.ga](https://micamara.ga).
 
-### Scripts
+### Available Scripts
 
 #### resize-images: resize and optimize products images
 
