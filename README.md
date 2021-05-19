@@ -1,6 +1,6 @@
 # statics.micamara.ga
 
-Statics files used in website [https://micamara.ga](https://micamara.ga).
+Repo with statics files used in website [https://micamara.ga](https://micamara.ga).
 
 ### Available Scripts
 
