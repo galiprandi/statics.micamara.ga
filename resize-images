@@ -1,0 +1,23 @@
+#!/bin/bash
+clear
+
+folder="${PWD}/products-images"
+files=*.jpg
+minimumWidth=400
+minimumHeight=400
+
+# Copy example image used to debug changing folder
+#folder="./tmp"
+#cp ~/Imágenes/*.jpg ${folder}
+
+echo -e "Resizing images of ${folder} to ${minimumWidth}x${minimumHeight}px..."
+
+for f in ${folder}/${files}; do
+  imageWidth=$(identify -format "%w" "$f")
+  imageHeight=$(identify -format "%h" "$f")
+
+  if [ "$imageWidth" -gt "$minimumWidth" ] || [ "$imageHeight" -gt "$minimumHeight" ]; then
+    mogrify -verbose -resize ''"$minimumWidth"x"$minimumHeight"'' -gravity center -extent ''"$minimumWidth"x"$minimumHeight"'' $f
+  fi
+done
+echo "Resizing done !"

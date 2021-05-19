@@ -1,0 +1,11 @@
+#!/bin/bash
+clear
+FOLDER="${PWD}/products-images"
+
+./resize-images
+echo -e "Uploading image to github..."
+git pull
+git add ${FOLDER}
+git commit -m "Uploading new products images"
+git push
+echo "Uploading done !"
